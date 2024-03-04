@@ -4,16 +4,19 @@
         <RouterLink to="/admin/products">產品列表</RouterLink> |
         <RouterLink to="/admin/order">訂單列表</RouterLink> |
         <RouterLink to="/">回到前台</RouterLink> |
-        <RouterLink to="/login">登出</RouterLink>
+        <RouterLink  @click="logout" to="/login">登出</RouterLink>
     </nav>
     <router-view></router-view>
 </template>
 <script>
 import axios from 'axios'
+import { mapActions } from 'pinia'
+import { useToastMessageStore } from '@/stores/toastMessage'
 const { VITE_URL } = import.meta.env
 
 export default {
   methods: {
+    ...mapActions(useToastMessageStore, ['pushMessage']),
     checkUser () {
       const api = `${VITE_URL}/v2/api/user/check`
       axios.post(api).then((response) => {
@@ -27,6 +30,23 @@ export default {
         this.$router.push('/login')
         // 未登入,強制踼到前到
       })
+    },
+    logout () {
+      const api = `${VITE_URL}/v2/logout`
+      this.$http.post(api)
+        .then((response) => {
+          this.pushMessage({
+            style: 'success',
+            title: '登出狀態',
+            content: response.data.message
+          })
+        }).catch((error) => {
+          this.pushMessage({
+            style: 'danger',
+            title: '登出狀態',
+            content: error.response.data.message
+          })
+        })
     }
   },
   mounted () {
