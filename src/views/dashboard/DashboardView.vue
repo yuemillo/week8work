@@ -3,7 +3,8 @@
     <nav>
         <RouterLink to="/admin/products">產品列表</RouterLink> |
         <RouterLink to="/admin/order">訂單列表</RouterLink> |
-        <RouterLink to="/">回到前台</RouterLink>
+        <RouterLink to="/">回到前台</RouterLink> |
+        <RouterLink to="/login">登出</RouterLink>
     </nav>
     <router-view></router-view>
 </template>
