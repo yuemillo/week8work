@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import 'bootstrap/scss/bootstrap.scss'
+import './assets/all.scss'
+import 'bootstrap'
 
 import Loading from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
