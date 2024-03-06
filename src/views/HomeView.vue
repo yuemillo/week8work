@@ -1,35 +1,41 @@
 <template>
   <div class="home">
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <div class="banner container-fluid">
+      <div class="carouselTitle d-flex flex-column align-items-center">
+        <div class="display-1 fw-black text-black">最貓的遊戲內容</div>
+        <div class="carouselTitleSmall fs-1 fw-black bg-warning text-dark text-center mt-5">等您來加入</div>
       </div>
-
-      <div class="carousel-inner" style="height: 100vh">
-        <div class="carouselTitle">
-      <div class="display-1 fw-black text-black">最貓的遊戲內容</div>
-      <div class="carouselTitleSmall fs-1 fw-black text-white">等您來加入</div>
     </div>
-        <div class="carousel-item active">
-          <img src="/public/_7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/public/OIG2.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/public/OIG2111.jpg" class="d-block w-100" alt="...">
-        </div>
+
+    <div class="game-feature bg-primary">
+      <div class="container">
+        <h3 class="display-1 fw-black text-black text-center pt-5">遊戲特色</h3>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+    </div>
+
+    <div class="container mt-5">
+      <h3 class="display-1 fw-black text-black">三大遊戲角色類型</h3>
+      <div class="d-flex align-items-center">
+          <div class="w-50">
+            <div class="h1 fw-black text-black">近戰</div>
+            <div class="fs-3 text-black mt-3">擅長在距離敵人較近的位置進行攻擊的角色。他們通常使用各種近戰武器或技能，例如劍、斧、拳、腳等，來對敵人造成物理或魔法傷害。</div>
+          </div>
+          <img src="/public/OIG2465454646546.jpg" class="ms-auto w-50" alt="...">
+      </div>
+      <div class="d-flex align-items-center flex-row-reverse">
+          <div class="w-50">
+            <div class="h1 fw-black text-black">遠程</div>
+            <div class="fs-3 text-black mt-3">擅長在距離敵人較遠的位置進行攻擊的角色。他們通常使用各種遠程武器或法術，例如弓箭、槍械、魔杖、法杖等，來對敵人造成物理或魔法傷害。</div>
+          </div>
+          <img src="/public/OIG4.4BEoVZmcT.jpg" class="me-auto w-50" alt="...">
+      </div>
+      <div class="d-flex align-items-center">
+          <div class="w-50">
+            <div class="h1 fw-black text-black">輔助</div>
+            <div class="fs-3 text-black mt-3">擅長在戰鬥中提供各種增益、治療或控制的角色。他們通常使用各種法術、樂器、神聖武器等，來幫助隊友或干擾敵人。</div>
+          </div>
+          <img src="/public/OIG1 54564646.jpg" class="ms-auto w-50" alt="...">
+      </div>
     </div>
 
   </div>
@@ -39,6 +45,25 @@
 .fw-black{
   font-family: 'Noto Sans TC';
   font-weight: normal;
+}
+.banner{
+  background-image: url('/public/OIG24564565.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .carouselTitle{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 30px;
+    text-shadow: 4px 4px 3px white;
+    .carouselTitleSmall{
+      width: 45%;
+      border-radius: 25px;
+    }
+  }
 }
 .carousel{
   position: relative;

@@ -29,4 +29,24 @@
         <RouterLink to="/login">登入</RouterLink> |
     </nav> -->
     <router-view></router-view>
+    <div class="footer bg-dark">
+    <div class="footerhead text-center pt-3">
+      <RouterLink class="navbar-brand" to="/"><img src="/public/catcatlogo.svg" style="width: 120px;height: auto"></RouterLink>
+    </div>
+    <ul class="footerword d-flex flex-column flex-lg-row justify-content-center mt-4 list-unstyled text-center">
+        <li class="fs-5 fs-700 text-light px-3 py-2"><RouterLink class="nav-link active" aria-current="page" to="/about">遊戲介紹</RouterLink></li>
+        <li class="fs-5 fs-700 text-light px-3 py-2">商城</li>
+        <li class="fs-5 fs-700 text-light px-3 py-2">購物車</li>
+        <li class="fs-5 fs-700 text-light px-3 py-2">登入</li>
+    </ul>
+
+    <div class="icon d-flex justify-content-center mt-4">
+        <i class="fa-brands fa-facebook text-light fs-1 px-5"></i>
+        <i class="fa-brands fa-instagram text-light fs-1 px-5"></i>
+        <i class="fa-brands fa-youtube text-light fs-1 px-5"></i>
+    </div>
+    <div class="footerbottom text-center mt-3 pb-5">
+        <p class="fs-5 text-primary">此專題僅供面試作品所用，非商業營利性質</p>
+    </div>
+</div>
 </template>
