@@ -90,7 +90,7 @@
            </div>
            <div class="mb-3">
              <div class="form-check">
-               <input id="is_enabled" class="form-check-input" type="checkbox"
+               <input id="is_enabled" v-model="editProduct.is_enabled" class="form-check-input" type="checkbox"
                       :true-value="1" :false-value="0">
                <label class="form-check-label" for="is_enabled">是否啟用</label>
              </div>
