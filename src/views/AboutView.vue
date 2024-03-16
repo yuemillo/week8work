@@ -9,15 +9,15 @@
               :pagination="{ clickable: true }">
               <swiper-slide class="position-relative">
                 <div class="fs-1 fw-black  text-warning position-absolute text-shadow" style="bottom: 30px; right: 30px; ">可愛的貓咪英雄</div>
-                <img src="/public/_7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="">
+                <img src="/7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="">
               </swiper-slide>
               <swiper-slide>
                 <div class="fs-1 fw-black text-warning position-absolute text-shadow" style="bottom: 30px; right: 30px; ">美麗的遊戲場景</div>
-                <img src="/public/_bde13a38-0362-432e-b74f-b1b9d509c873.jpg" alt="">
+                <img src="/bde13a38-0362-432e-b74f-b1b9d509c873.jpg" alt="">
               </swiper-slide>
               <swiper-slide>
                 <div class="fs-1 fw-black text-warning position-absolute text-shadow" style="bottom: 30px; right: 30px; ">豐富的技能和策略選擇</div>
-                <img src="/public/_c4e786da-8f41-4929-816f-39ee7b5ac64d.jpg" alt="">
+                <img src="/c4e786da-8f41-4929-816f-39ee7b5ac64d.jpg" alt="">
               </swiper-slide>
                 </swiper>
               </div>
@@ -26,7 +26,7 @@
                   <h3 class="display-1 fw-black text-black text-center pt-5 mb-3">遊戲特色</h3>
                   <div class="position-relative">
                     <div class="fs-1 fw-black text-warning position-absolute text-shadow" style="bottom: 5px; right: 5px; ">可愛的貓咪英雄</div>
-                    <img src="/public/_7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="" width="360px">
+                    <img src="/7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="" width="360px">
                   </div>
                 </div>
               </div>

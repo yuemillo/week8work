@@ -39,7 +39,7 @@
     <ul class="footerword d-flex flex-column flex-lg-row justify-content-center mt-4 list-unstyled text-center">
         <li class="fs-5 fs-700 text-light px-3 py-2"><RouterLink class="nav-link active" aria-current="page" to="/about">遊戲介紹</RouterLink></li>
         <li class="fs-5 fs-700 text-light px-3 py-2"><RouterLink class="nav-link" to="/products">喵喵商城</RouterLink></li>
-        <li class="fs-5 fs-700 text-light px-3 py-2">購物車</li>
+        <li class="fs-5 fs-700 text-light px-3 py-2"><RouterLink class="nav-link" to="/cart">購物車</RouterLink></li>
         <li class="fs-5 fs-700 text-light px-3 py-2"><RouterLink class="nav-link" to="/login">登入</RouterLink></li>
     </ul>
 

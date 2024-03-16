@@ -11,8 +11,8 @@
     </div>
   <div class="container-fluid bg-primary pb-3 d-none d-xl-block">
     <div class="game-feature-bg d-flex position-relative">
-      <img src="/public/_cbcc5ef9-8e33-4006-a889-13c92d6f7275L.png" class="me-auto" alt="">
-      <img src="/public/_cbcc5ef9-8e33-4006-a889-13c92d6f7275R.png" class="ms-auto" alt="">
+      <img src="/cbcc5ef9-8e33-4006-a889-13c92d6f7275L.png" class="me-auto" alt="">
+      <img src="/cbcc5ef9-8e33-4006-a889-13c92d6f7275R.png" class="ms-auto" alt="">
       <div class="container position-absolute top-50 start-50 translate-middle">
       <h3 class="display-1 fw-black text-black text-center pt-5 mb-3">遊戲特色</h3>
       <div>
@@ -22,15 +22,15 @@
         :pagination="{ clickable: true }">
         <swiper-slide class="position-relative">
           <div class="fs-1 fw-black  text-warning position-absolute text-shadow" style="bottom: 30px; right: 30px; ">可愛的貓咪英雄</div>
-          <img src="/public/_7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="">
+          <img src="/7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="">
         </swiper-slide>
         <swiper-slide>
           <div class="fs-1 fw-black text-warning position-absolute text-shadow" style="bottom: 30px; right: 30px; ">美麗的遊戲場景</div>
-          <img src="/public/_bde13a38-0362-432e-b74f-b1b9d509c873.jpg" alt="">
+          <img src="/bde13a38-0362-432e-b74f-b1b9d509c873.jpg" alt="">
         </swiper-slide>
         <swiper-slide>
           <div class="fs-1 fw-black text-warning position-absolute text-shadow" style="bottom: 30px; right: 30px; ">豐富的技能和策略選擇</div>
-          <img src="/public/_c4e786da-8f41-4929-816f-39ee7b5ac64d.jpg" alt="">
+          <img src="/c4e786da-8f41-4929-816f-39ee7b5ac64d.jpg" alt="">
         </swiper-slide>
       </swiper>
       </div>
@@ -43,7 +43,7 @@
       <h3 class="display-1 fw-black text-black text-center pt-5 mb-3">遊戲特色</h3>
       <div class="position-relative">
         <div class="fs-1 fw-black text-warning position-absolute text-shadow" style="bottom: 5px; right: 5px; ">可愛的貓咪英雄</div>
-        <img src="/public/_7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="" width="360px">
+        <img src="/7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="" width="360px">
       </div>
     </div>
   </div>
@@ -55,21 +55,21 @@
             <div class="h1 fw-black text-black">近戰</div>
             <div class="fs-3 text-black mt-3">擅長在距離敵人較近的位置進行攻擊的角色。他們通常使用各種近戰武器或技能，例如劍、斧、拳、腳等，來對敵人造成物理或魔法傷害。</div>
           </div>
-          <img src="/public/OIG2465454646546.jpg" class="ms-auto w-50" alt="...">
+          <img src="/OIG2465454646546.jpg" class="ms-auto w-50" alt="...">
       </div>
       <div class="d-flex align-items-center flex-row-reverse">
           <div class="w-50">
             <div class="h1 fw-black text-black">遠程</div>
             <div class="fs-3 text-black mt-3">擅長在距離敵人較遠的位置進行攻擊的角色。他們通常使用各種遠程武器或法術，例如弓箭、槍械、魔杖、法杖等，來對敵人造成物理或魔法傷害。</div>
           </div>
-          <img src="/public/OIG4.4BEoVZmcT.jpg" class="me-auto w-50" alt="...">
+          <img src="/OIG4.4BEoVZmcT.jpg" class="me-auto w-50" alt="...">
       </div>
       <div class="d-flex align-items-center">
           <div class="w-50">
             <div class="h1 fw-black text-black">輔助</div>
             <div class="fs-3 text-black mt-3">擅長在戰鬥中提供各種增益、治療或控制的角色。他們通常使用各種法術、樂器、神聖武器等，來幫助隊友或干擾敵人。</div>
           </div>
-          <img src="/public/OIG1 54564646.jpg" class="ms-auto w-50" alt="...">
+          <img src="/OIG1 54564646.jpg" class="ms-auto w-50" alt="...">
       </div>
     </div>
 
@@ -196,7 +196,7 @@ export default {
   border: 9px solid #9747FF;
 }
 .banner{
-  background-image: url('/public/OIG24564565.jpg');
+  background-image: url('/OIG24564565.jpg');
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
