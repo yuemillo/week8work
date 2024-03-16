@@ -22,21 +22,14 @@
                 </swiper>
               </div>
               <div class="container-fluid bg-primary pb-3 d-xl-none">
-    <div class="container">
-      <h3 class="display-1 fw-black text-black text-center pt-5 mb-3">遊戲特色</h3>
-      <div>
-      <swiper2 :slides-per-view="2" :space-between="50"
-        :modules="modules"
-        navigation
-        :pagination="{ clickable: true }">
-        <swiper-slide class="position-relative">
-          <div class="fs-1 fw-black  text-warning position-absolute text-shadow" style="bottom: 30px; right: 30px; ">可愛的貓咪英雄</div>
-          <img src="/public/_7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="">
-        </swiper-slide>
-      </swiper2>
-      </div>
-    </div>
-  </div>
+                <div class="container d-flex flex-column align-items-center">
+                  <h3 class="display-1 fw-black text-black text-center pt-5 mb-3">遊戲特色</h3>
+                  <div class="position-relative">
+                    <div class="fs-1 fw-black text-warning position-absolute text-shadow" style="bottom: 5px; right: 5px; ">可愛的貓咪英雄</div>
+                    <img src="/public/_7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="" width="360px">
+                  </div>
+                </div>
+              </div>
               <div class="col col-m-5">
                 <h3 class="fs-1 fw-black text-black text-center pt-5 mb-3">遊戲介紹</h3>
                 <h5 class="fs-3">如果您喜歡英雄聯盟風格的遊戲，並且喜愛可愛的貓咪角色，那麼《喵喵大亂鬥》可能是您感興趣的遊戲</h5>
