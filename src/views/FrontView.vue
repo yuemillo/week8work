@@ -6,16 +6,19 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <RouterLink class="nav-link active" aria-current="page" to="/about">遊戲介紹</RouterLink>
         </li>
         <li class="nav-item">
           <RouterLink class="nav-link" to="/products">喵喵商城</RouterLink>
         </li>
-        <li class="nav-item">
-          <RouterLink class="nav-link" to="/cart">購物車</RouterLink>
-        </li>
+        <RouterLink class="btn btn-outline-primary position-relative ms-3" to="/cart"><i class="bi bi-cart4"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          {{ this.carts?.length }}
+          <span class="visually-hidden">unread messages</span>
+  </span>
+        </RouterLink>
       </ul>
     </div>
   </div>
@@ -35,9 +38,9 @@
     </div>
     <ul class="footerword d-flex flex-column flex-lg-row justify-content-center mt-4 list-unstyled text-center">
         <li class="fs-5 fs-700 text-light px-3 py-2"><RouterLink class="nav-link active" aria-current="page" to="/about">遊戲介紹</RouterLink></li>
-        <li class="fs-5 fs-700 text-light px-3 py-2">喵喵商城</li>
+        <li class="fs-5 fs-700 text-light px-3 py-2"><RouterLink class="nav-link" to="/products">喵喵商城</RouterLink></li>
         <li class="fs-5 fs-700 text-light px-3 py-2">購物車</li>
-        <li class="fs-5 fs-700 text-light px-3 py-2">登入</li>
+        <li class="fs-5 fs-700 text-light px-3 py-2"><RouterLink class="nav-link" to="/login">登入</RouterLink></li>
     </ul>
 
     <div class="icon d-flex justify-content-center mt-4">
@@ -50,3 +53,20 @@
     </div>
 </div>
 </template>
+
+<script>
+import { mapActions, mapState } from 'pinia'
+
+import cartStore from '../stores/cartStore'
+export default {
+  computed: {
+    ...mapState(cartStore, ['carts'])
+  },
+  methods: {
+    ...mapActions(cartStore, ['getCart'])
+  },
+  mounted () {
+    this.getCart()
+  }
+}
+</script>
