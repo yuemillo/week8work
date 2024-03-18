@@ -40,10 +40,10 @@
 
   <div class="container-fluid bg-primary pb-3 d-xl-none">
     <div class="container d-flex flex-column align-items-center">
-      <h3 class="display-1 fw-black text-black text-center pt-5 mb-3">遊戲特色</h3>
+      <h3 class="display-3 fw-black text-black text-center pt-5 mb-3">遊戲特色</h3>
       <div class="position-relative">
-        <div class="fs-1 fw-black text-warning position-absolute text-shadow" style="bottom: 5px; right: 5px; ">可愛的貓咪英雄</div>
-        <img src="/7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="" width="360px">
+        <div class="fs-3 fw-black text-warning position-absolute text-shadow" style="bottom: 5px; right: 10px; ">可愛的貓咪英雄</div>
+        <img src="/7a1ce4f6-c3f9-45d2-a3b7-94d83cd263da.jpg" alt="" width="100%" class="rounded-3 border border-5 border-warning">
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@
 
     <div class="game-hero bg-warning pb-5">
       <div class="container">
-      <h3 class="display-1 fw-black text-black text-center pt-5 mb-3">喵喵英雄</h3>
+      <h3 class="display-3 fw-black text-black text-center pt-5 mb-3">喵喵英雄</h3>
         <div class="row row-cols-1 row-cols-md-4 g-4">
           <div class="col" v-for="product in products" :key="product.id">
             <div class="card bg-transparent" @click="openModal(product)" :disabled="product === status.openModal">
@@ -198,6 +198,7 @@ export default {
 .banner{
   background-image: url('/OIG24564565.jpg');
   height: 100vh;
+  background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;

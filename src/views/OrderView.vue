@@ -96,7 +96,7 @@ export default {
         .then((res) => {
           console.log(res)
           // Swal.fire(res.data.message)
-          this.$router.push('/Checkout')
+          this.$router.push(`/Checkout/${this.orderId}`)
         })
     },
     ...mapActions(cartStore, ['getCart'])
