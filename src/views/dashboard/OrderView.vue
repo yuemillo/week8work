@@ -70,8 +70,8 @@
     ref="delModal"
     @del-item="delOrder"
   />
-  <PagintionComponent
-    :pages="pagination" @emitPages="getOrders"
+  <OrderPagintionComponent
+  :pages="pages" :get-orders="getOrders"
   />
 </template>
 
@@ -80,9 +80,9 @@ import axios from 'axios'
 import { mapActions } from 'pinia'
 import { useToastMessageStore } from '@/stores/toastMessage'
 
-import OrderModal from '../../components/OrderModal.vue'
-import DelModal from '../../components/DelModal.vue'
-import PagintionComponent from '../../components/PagintionComponent.vue'
+import OrderModal from '@/components/OrderModal.vue'
+import DelModal from '@/components/DelModal.vue'
+import OrderPagintionComponent from '@/components/OrderPagintionComponent.vue'
 
 const { VITE_URL, VITE_NAME } = import.meta.env
 
@@ -91,16 +91,16 @@ export default {
     return {
       isLoading: true,
       isNew: false,
+      pages: {},
       orders: {},
       tempOrder: {},
-      pagination: {},
       currentPage: 1
     }
   },
   components: {
     OrderModal,
     DelModal,
-    PagintionComponent
+    OrderPagintionComponent
   },
   methods: {
     checkAdmin () {
@@ -113,15 +113,13 @@ export default {
     ...mapActions(useToastMessageStore, ['pushMessage']),
     getOrders (currentPage = 1) {
       // 取得訂單
-      this.currentPage = currentPage
       const url = `${VITE_URL}/v2/api/${VITE_NAME}/admin/orders?page=${currentPage}`
-      // this.isLoading = true
-      axios.get(url, this.tempProduct).then((response) => {
-        this.orders = response.data.orders
-        this.pagination = response.data.pagination
-        // this.isLoading = false
+      axios.get(url, this.tempProduct).then((res) => {
+        this.orders = res.data.orders
+        this.pages = res.data.pagination
+        this.isLoading = false
       }).catch((error) => {
-        // this.isLoading = false
+        this.isLoading = false
         this.pushMessage({
           style: 'danger',
           title: '錯誤訊息',
@@ -143,14 +141,12 @@ export default {
       delComponent.openModal()
     },
     updatePaid (item) {
-      // this.isLoading = true;
       const api = `${VITE_URL}/v2/api/${VITE_NAME}/admin/order/${item.id}`
       const paid = {
         is_paid: item.is_paid
       }
       axios.put(api, { data: paid })
         .then((response) => {
-        // this.isLoading = false;
           const orderComponent = this.$refs.orderModal
           orderComponent.hideModal()
 
@@ -173,10 +169,7 @@ export default {
     },
     delOrder () {
       const url = `${VITE_URL}/v2/api/${VITE_NAME}/admin/order/${this.tempOrder.id}`
-      // this.isLoading = true
       axios.delete(url).then(() => {
-        // this.isLoading = false
-
         const delComponent = this.$refs.delModal
         delComponent.hideModal()
 
@@ -199,9 +192,6 @@ export default {
     // 儲存token避免重複登入
     this.checkAdmin()
     this.getOrders()
-    setTimeout(() => {
-      this.isLoading = false
-    }, 1000)
   }
 }
 </script>

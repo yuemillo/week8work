@@ -13,8 +13,10 @@ import { localize, setLocale } from '@vee-validate/i18n'
 // 引入 VeeValidate 的繁體中文語系檔
 import zhTW from '@vee-validate/i18n/dist/locale/zh_TW.json'
 
+// import { LoadingPlugin } from 'vue-loading-overlay'
 import Loading from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
+// vue-loading套件
 
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -54,5 +56,8 @@ app.component('VForm', Form)
 app.component('ErrorMessage', ErrorMessage)
 
 app.component('VueLoading', Loading)
+// app.use(LoadingPlugin, {
+//   color: 'blue'
+// })
 
 app.mount('#app')

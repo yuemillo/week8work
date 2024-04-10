@@ -1,36 +1,37 @@
 <template>
-    <h2>登入</h2>
-    <div class="container">
-          <div class="row justify-content-center">
-            <h1 class="h3 mb-3 font-weight-normal">
-              請先登入
-            </h1>
-            <div class="col-8">
-              <form id="form" class="form-signin" @submit.prevent="login">
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="username" v-model="user.username"
-                    placeholder="name@example.com" required autofocus>
-                  <label for="username">Email address</label>
-                </div>
-                <div class="form-floating">
-                  <input type="password" class="form-control" id="password" v-model="user.password"
-                    placeholder="Password" required>
-                  <label for="password">Password</label>
-                </div>
-                <button class="btn btn-lg btn-primary w-100 mt-3" type="submit">
-                  登入
-                </button>
-              </form>
-            </div>
+  <h2>登入</h2>
+  <div class="container">
+    <div class="row justify-content-center">
+      <h1 class="h3 mb-3 font-weight-normal">
+        請先登入
+      </h1>
+      <div class="col-8">
+        <form id="form" class="form-signin" @submit.prevent="login">
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="username" v-model="user.username"
+              placeholder="name@example.com" required autofocus>
+            <label for="username">Email address</label>
           </div>
-          <p class="mt-5 mb-3 text-muted">
-            &copy; 2021~∞ - 六角學院
-          </p>
-        </div>
-  </template>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="password" v-model="user.password"
+              placeholder="Password" required>
+            <label for="password">Password</label>
+          </div>
+          <button type="submit" class="btn btn-lg btn-primary w-100 mt-3">
+            登入
+          </button>
+        </form>
+      </div>
+    </div>
+    <p class="mt-5 mb-3 text-muted">
+      &copy; 2021~∞ - 六角學院
+    </p>
+  </div>
+</template>
 
 <script>
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 const { VITE_URL } = import.meta.env
 // 環境變數
@@ -56,7 +57,12 @@ export default {
           // 用router登入完成切換頁面
         })
         .catch((err) => {
-          alert(err.data.message)
+          Swal.fire({
+            title: err.response.data.message,
+            position: 'top-end',
+            showCancelButton: false,
+            timer: 1500
+          })
           this.$router.push('/login')
         })
     }
