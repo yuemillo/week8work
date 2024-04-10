@@ -102,6 +102,39 @@ export default {
         })
     }
   },
+  beforeRouteEnter (to, from, next) {
+    const { id } = to.params
+    const api = `${VITE_URL}/v2/api/${VITE_NAME}/product/${id}`
+    axios.get(api)
+      .then((res) => {
+        next(vm => {
+          vm.product = res.data.product
+          vm.category = res.data.product.category
+          vm.isLoading = false
+          window.scrollTo(0, 0) // 滚动到页面顶部
+        })
+      })
+      .catch((error) => {
+        console.error('Error fetching products:', error)
+        next(false)
+      })
+  },
+  beforeRouteUpdate (to, from, next) {
+    const { id } = to.params
+    const api = `${VITE_URL}/v2/api/${VITE_NAME}/product/${id}`
+    axios.get(api)
+      .then((res) => {
+        this.product = res.data.product
+        this.category = res.data.product.category
+        this.isLoading = false
+        window.scrollTo(0, 0) // 滚动到页面顶部
+        next()
+      })
+      .catch((error) => {
+        console.error('Error fetching products:', error)
+        next(false)
+      })
+  },
   mounted () {
     this.getProducts()
     this.getProductsAll()
